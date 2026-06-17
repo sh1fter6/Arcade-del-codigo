@@ -1,165 +1,159 @@
+console.group("NIVEL 1: El Inventario del Heroe");
+{
+  let nombre = "Ness";
+  let nivel = 7;
+  let energia = 88.5;
+  let estaVivo = true;
+  let monedas = 120;
+  const juego = "EarthBound";
+  let poderSecreto;
+  poderSecreto = "PSI Rockin";
 
-// Ejercicios resueltos de Variables, Expresiones y Cadenas de Caracteres
+  console.log("nombre es de tipo:", typeof nombre);
+  console.log("nivel es de tipo:", typeof nivel);
+  console.log("energia es de tipo:", typeof energia);
+  console.log("estaVivo es de tipo:", typeof estaVivo);
+  console.log("monedas es de tipo:", typeof monedas);
+  console.log("juego es de tipo:", typeof juego);
+  console.log("poderSecreto es de tipo:", typeof poderSecreto);
 
-
-// NIVEL 1: EL INVENTARIO DEL HÉROE
-console.group(" NIVEL 1: El Inventario del Héroe");
-
-let nombre = "Ness";
-let nivel = 7;
-let energia = 88.5;
-let estaVivo = true;
-let monedas = 120;
-
-const juego = "Arcade del Código";
-
-
-let poderSecreto;
-poderSecreto = "Teletransportación";
-
-console.log("nombre es de tipo:", typeof nombre);
-console.log("nivel es de tipo:", typeof nivel);
-console.log("energia es de tipo:", typeof energia);
-console.log("estaVivo es de tipo:", typeof estaVivo);
-console.log("monedas es de tipo:", typeof monedas);
-
-console.log(`Héroe: ${nombre} | Nivel ${nivel} | Energía ${energia} | ¿Vive? ${estaVivo} | ${monedas} monedas`);
-
+  console.log("Heroe: " + nombre + " | Nivel " + nivel + " | Energia " + energia + " | Vive? " + estaVivo + " | " + monedas + " monedas");
+}
 console.groupEnd();
 
+console.group("NIVEL 2: El Laboratorio de Tipos");
+{
+  let unString = "Tazmily";
+  let unNumero = 1995;
+  let unBooleano = true;
+  let unArray = ["Ness", "Lucas", "Claus"];
+  let unNull = null;
+  let sinInicializar;
 
-// NIVEL 2: EL LABORATORIO DE TIPOS
-console.group(" NIVEL 2: El Laboratorio de Tipos");
+  console.log("texto es " + typeof unString + ", numero es " + typeof unNumero + ", activo es " + typeof unBooleano);
+  console.log("unArray es de tipo:", typeof unArray);
+  console.log("unNull es de tipo:", typeof unNull);
+  console.log("sinValor es de tipo:", typeof sinInicializar);
 
-let unString = "Hola";
-let unNumero = 42;
-let unBooleano = false;
-let unArray = [1, 2, 3];
-let unNull = null;
-let sinInicializar;
-
-console.log(`texto es ${typeof unString}, numero es ${typeof unNumero}, activo es ${typeof unBooleano}`);
-console.log("sinValor es de tipo:", typeof sinInicializar);
-
-let dato = "Mercedes Benz";
-console.log("dato empezó como:", typeof dato);
-dato = 3;
-console.log("y ahora es:", typeof dato);
-console.log("5 + 3 =", 5 + 3);
-console.log('"5" + 3 =', "5" + 3);
-
+  let dato = "Sky Runner";
+  console.log("dato empezo como:", typeof dato);
+  dato = 3;
+  console.log("y ahora es:", typeof dato);
+  console.log("5 + 3 =", 5 + 3);
+  console.log('"5" + 3 =', "5" + 3);
+}
 console.groupEnd();
 
+console.group("NIVEL 3: La Maquina de Puntaje");
+{
+  let monedas = 3;
+  let gemas = 5;
+  let multiplicador = 2;
 
-// NIVEL 3: LA MÁQUINA DE PUNTAJE
-console.group("NIVEL 3: La Máquina de Puntaje");
+  console.log("Suma: " + (gemas + monedas) + " | Resta: " + (gemas - monedas) + " | Multiplicacion: " + (gemas * monedas) + " | Division: " + (gemas / monedas));
 
-let monedasLvl3 = 3;
-let gemas = 5;
-let multiplicador = 2;
+  let puntajeSinParentesis = monedas + gemas * multiplicador;
+  let puntajeConParentesis = (monedas + gemas) * multiplicador;
 
-console.log(`Suma: ${gemas + monedasLvl3} | Resta: ${gemas - monedasLvl3} | Multiplicación: ${gemas * monedasLvl3}`);
+  console.log("Puntaje (sin parentesis):", puntajeSinParentesis);
+  console.log("Puntaje (con parentesis):", puntajeConParentesis);
 
-// Misión B: La trampa de la precedencia
-let puntajeSinParentesis = monedasLvl3 + gemas * multiplicador;
-let puntajeConParentesis = (monedasLvl3 + gemas) * multiplicador;
-
-console.log("Puntaje (sin paréntesis):", puntajeSinParentesis);
-console.log("Puntaje (con paréntesis):", puntajeConParentesis);
-
-// Misión C: Par o impar con el resto
-let restoPuntaje = puntajeSinParentesis % 2;
-console.log("Resto del puntaje entre 2:", restoPuntaje);
-
+  let restoPuntaje = puntajeSinParentesis % 2;
+  console.log("Resto del puntaje entre 2:", restoPuntaje);
+  console.log("El puntaje es par?:", restoPuntaje === 0);
+}
 console.groupEnd();
-
-
-
-// NIVEL 4: EL DUELO DE PODERES
 
 console.group("NIVEL 4: El Duelo de Poderes");
+{
+  let vidas = 3;
+  vidas++;
+  console.log("Vidas tras power-up:", vidas);
 
-// Misión A: Incremento y decremento
-let vidas = 3;
-vidas++; // Incrementa vidas en 1
-console.log("Vidas tras power-up:", vidas);
+  let a = 3;
+  console.log("a++ devuelve:", a++);
+  console.log("y luego a vale:", a);
+  console.log("++a devuelve:", ++a);
 
-let a = 3;
-console.log("a++ devuelve:", a++);
-console.log("y luego a vale:", a);
-console.log("++a devuelve:", ++a);
+  let poderHeroe = 7;
+  let poderEnemigo = 5;
 
-// Misión B: El medidor de poder
-let poderHeroe = 7;
-let poderEnemigo = 5;
-
-console.log("poderHeroe == poderEnemigo ->", poderHeroe == poderEnemigo);
-console.log("poderHeroe > poderEnemigo  ->", poderHeroe > poderEnemigo);
-
+  console.log("poderHeroe == poderEnemigo ->", poderHeroe == poderEnemigo);
+  console.log("poderHeroe != poderEnemigo ->", poderHeroe != poderEnemigo);
+  console.log("poderHeroe > poderEnemigo  ->", poderHeroe > poderEnemigo);
+  console.log("poderHeroe >= poderEnemigo ->", poderHeroe >= poderEnemigo);
+  console.log("poderHeroe < poderEnemigo  ->", poderHeroe < poderEnemigo);
+  console.log("poderHeroe <= poderEnemigo ->", poderHeroe <= poderEnemigo);
+}
 console.groupEnd();
 
+console.group("NIVEL 5: El Generador de Gamertags");
+{
+  let nombre = "Ness";
+  let apellido = "Onett";
 
-// NIVEL 5: EL GENERADOR DE GAMERTAGS
+  let gamertag = nombre + "_" + apellido;
+  console.log("Gamertag:", gamertag);
+  console.log("Longitud:", gamertag.length);
+  console.log("Primera letra:", gamertag.charAt(0));
 
-console.group("💬 NIVEL 5: El Generador de Gamertags");
-
-// Misión:
-let primerNombre = "Ada";
-let apellido = "Lovelace";
-
-// Generar gamertag con guión bajo
-let gamertag = primerNombre + "_" + apellido;
-console.log("Gamertag:", gamertag);
-
-// Mostrar longitud
-console.log("Longitud:", gamertag.length);
-
-// Mostrar primera letra (posición 0)
-console.log("Primera letra:", gamertag.charAt(0));
-
-// Cadena con comillas dobles dentro
-let grito = primerNombre + ' dijo "¡a programar!"';
-console.log("Grito:", grito);
-
+  let grito = nombre + ' dijo "SMAAAASH!"';
+  console.log("Grito:", grito);
+}
 console.groupEnd();
 
+console.group("JEFE FINAL: La Tienda del Arcade");
+{
+  const nombreCliente = "Lucas";
+  const monedasDisponibles = 200;
 
-// JEFE FINAL: LA TIENDA DEL ARCADE (EL RECIBO)
-console.group("👑 JEFE FINAL: La Tienda del Arcade");
+  const producto1 = "Franklin Badge";
+  const precio1 = 50;
+  const cantidad1 = 2;
 
-const nombreCliente = "Ness";
-const monedasDisponibles = 200;
+  const producto2 = "PSI Caramel";
+  const precio2 = 75;
+  const cantidad2 = 1;
 
-const precio1 = 50;
-const cantidad1 = 2;
+  const producto3 = "Beef Jerky";
+  const precio3 = 15;
+  const cantidad3 = 3;
 
-const precio2 = 75;
-const cantidad2 = 1;
+  const subtotal1 = precio1 * cantidad1;
+  const subtotal2 = precio2 * cantidad2;
+  const subtotal3 = precio3 * cantidad3;
+  const total = subtotal1 + subtotal2 + subtotal3;
 
-const precio3 = 15;
-const cantidad3 = 3;
+  const descuento = total * 0.10;
+  const totalConDescuento = total - descuento;
 
-const subtotal1 = precio1 * cantidad1;
-const subtotal2 = precio2 * cantidad2;
-const subtotal3 = precio3 * cantidad3;
-const total = subtotal1 + subtotal2 + subtotal3;
+  const saldoRestante = monedasDisponibles - totalConDescuento;
+  const codigoCliente = nombreCliente.charAt(0) + nombreCliente.length;
 
-const descuento = total * 0.10;
-const totalConDescuento = total - descuento;
+  console.log("===== TIENDA DEL ARCADE =====");
+  console.log("Cliente: " + nombreCliente + " (codigo " + codigoCliente + ")");
+  console.log(producto1 + "   x" + cantidad1 + " = " + subtotal1 + " monedas");
+  console.log(producto2 + "       x" + cantidad2 + " = " + subtotal2 + " monedas");
+  console.log(producto3 + "       x" + cantidad3 + " = " + subtotal3 + " monedas");
+  console.log("-----------------------------");
+  console.log("Total:            " + total + " monedas");
+  console.log("Descuento (10%):  -" + descuento + " monedas");
+  console.log("TOTAL A PAGAR:    " + totalConDescuento + " monedas");
+  console.log("Saldo restante:   " + saldoRestante + " monedas");
+  console.log("=============================");
 
-const saldoRestante = monedasDisponibles - totalConDescuento;
-const codigoCliente = nombreCliente.charAt(0) + nombreCliente.length;
+  console.group("Misiones Bonus completadas:");
+  
+  let iva = totalConDescuento * 0.19;
+  let totalConIva = totalConDescuento + iva;
+  console.log("Recibo con IVA 19%: " + iva + " monedas (Total con IVA: " + totalConIva + " monedas)");
 
-console.log("===== TIENDA DEL ARCADE =====");
-console.log("Cliente: " + nombreCliente + " (código " + codigoCliente + ")");
-console.log("Vida Extra   x" + cantidad1 + " = " + subtotal1 + " monedas");
-console.log("Escudo       x" + cantidad2 + " = " + subtotal2 + " monedas");
-console.log("Poción       x" + cantidad3 + " = " + subtotal3 + " monedas");
-console.log("-----------------------------");
-console.log("Total:            " + total + " monedas");
-console.log("Descuento (10%):  -" + descuento + " monedas");
-console.log("TOTAL A PAGAR:    " + totalConDescuento + " monedas");
-console.log("Saldo restante:   " + saldoRestante + " monedas");
-console.log("=============================");
+  console.log("Longitud del nombre del producto mas caro (" + producto2 + "): " + producto2.length + " letras");
 
+  let ultimaLetra = nombreCliente.charAt(nombreCliente.length - 1);
+  let codigoClienteMejorado = nombreCliente.charAt(0) + nombreCliente.length + ultimaLetra;
+  console.log("Codigo de cliente mejorado: " + codigoClienteMejorado);
+
+  console.groupEnd();
+}
 console.groupEnd();
